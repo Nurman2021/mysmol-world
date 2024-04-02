@@ -3,15 +3,16 @@
     import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
     import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
     let mixer;
-    let smolhome_action
-
-
+    let smolhome_action;
+    
+    
+    
     onMount(async ()=>{
             import('three').then(THREE =>{
             const clock = new THREE.Clock();
             const scene = new THREE.Scene();
             const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-            const renderer = new THREE.WebGLRenderer();
+            const renderer = new THREE.WebGLRenderer({antialias: true, canvas: document.querySelector('#bg')});
             const SmolLoader = new GLTFLoader();
             const controls = new OrbitControls(camera, renderer.domElement);
 
@@ -19,9 +20,8 @@
 
             renderer.setSize(window.innerWidth, window.innerHeight);
             renderer.setClearColor(0x000000, 0);
-            document.body.appendChild(renderer.domElement);
 
-            camera.position.z = 5;
+            camera.position.z = 2;
      
 
             SmolLoader.load('src/model/smol-home/scene.gltf', gltf =>{
@@ -31,9 +31,6 @@
                 console.log(model);
 
                 mixer = new THREE.AnimationMixer(model);
-                // animations.array.forEach((clip)) => {
-                //     mixer.clipAction(clip).play(),
-                // };
                 animations.forEach((clip) => {
                     mixer.clipAction(clip).play();
                 });
@@ -58,3 +55,11 @@
     });
   
 </script>
+<canvas id="bg"></canvas>
+<style>
+    canvas{
+position: fixed;
+  top: 0;
+  left: 0;
+    }
+</style>

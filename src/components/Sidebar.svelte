@@ -12,13 +12,6 @@
         class="smol-sidebar-rectangle1"
       />
     </div>
-    <img
-      src="./assets/7ed0a1472d8130e8ba71e2bc3a3e4902.svg"
-      alt="rectangle"
-      width="44"
-      height="2"
-      class="smol-sidebar-rectangle2"
-    />
     <div class="smol-sidebar-frame03">
       <div class="smol-sidebar-text5">
         <p class="smol-sidebar-text6">Main</p>
@@ -66,13 +59,6 @@
         />
       </div>
     </div>
-    <img
-      src="./assets/bf61a0d201995adb04a725c54dc3fde6.svg"
-      alt="rectangle"
-      width="44"
-      height="2"
-      class="smol-sidebar-rectangle3"
-    />
     <div class="smol-sidebar-frame15">
       <div class="smol-sidebar-frame16">
         <span
@@ -112,6 +98,9 @@ color: #ffffff;
   flex-direction: column;
   justify-content: flex-start;
   background-color: #000;
+  opacity: 66%;
+  top: 20vh;
+  filter: blur(25.8);
 }
 
 .smol-sidebar-frame02 {
@@ -120,8 +109,7 @@ color: #ffffff;
   box-sizing: border-box;
 }
 
-.smol-sidebar-rectangle1,
-.smol-sidebar-rectangle2 {
+.smol-sidebar-rectangle1{
   width: 100%;
   height: auto;
   margin: 0;
@@ -130,9 +118,6 @@ color: #ffffff;
   border-radius: 36px 36px 36px 36px;
 }
 
-.smol-sidebar-rectangle2 {
-  border-radius: 2px 2px 2px 2px;
-}
 
 .smol-sidebar-frame03 {
   gap: 8px;
@@ -289,14 +274,6 @@ color: #ffffff;
   box-sizing: border-box;
 }
 
-.smol-sidebar-rectangle3 {
-  width: 100%;
-  height: auto;
-  margin: 0;
-  display: block;
-  max-width: 44px;
-  border-radius: 2px 2px 2px 2px;
-}
 
 .smol-sidebar-frame15,
 .smol-sidebar-frame16 {
