@@ -15,9 +15,9 @@
 <svelte:head>
     <title>My Smol | Nurman</title>
 </svelte:head>
-<Sidebar />
 
 <Box />
+<Sidebar />
 <main>
     <!-- <div class="main-container"> -->
     <!-- <Box {sceneContainer}/> -->
@@ -29,6 +29,9 @@
         </div>
         <div></div>
 
+    </section>
+    <section id="about">
+        <h1>About</h1>
     </section>
 </main>
 

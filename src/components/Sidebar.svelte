@@ -100,6 +100,7 @@ color: #ffffff;
   background-color: #000;
   opacity: 66%;
   top: 20vh;
+  left: 5%;
   filter: blur(25.8);
 }
 
