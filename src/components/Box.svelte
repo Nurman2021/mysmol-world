@@ -65,7 +65,7 @@
                 model.receiveShadow = true;
 
                 scene.add(model);
-                console.log(model);
+                console.log('home',model);
 
                 mixer = new THREE.AnimationMixer(model);
                 animations.forEach((clip) => {
@@ -74,6 +74,62 @@
                
 
             });
+
+            // SmolLoader.load('src/model/smol_ame_-_amelia_watson_holomyth/scene.gltf', gltf =>{
+            //     const model = gltf.scene;
+            //     const animations = gltf.animations;
+
+            //     model.position.set(0, 0, 0);
+            //     model.rotation.y = -1.02;
+
+            //     model.traverse(function(node){
+            //         if(node.isMesh)
+            //         node.castShadow = true;
+
+            //     })
+            //     model.castShadow = true;
+            //     model.receiveShadow = true;
+
+            //     scene.add(model);
+            //     console.log('ame',model);
+
+            //     mixer = new THREE.AnimationMixer(model);
+            //     animations.forEach((clip) => {
+            //         mixer.clipAction(clip).play();
+            //     });
+               
+
+            // });
+
+
+            // SmolLoader.load('src/model/room_diorama_model/scene.gltf', gltf =>{
+            //     const model = gltf.scene;
+            //     const animations = gltf.animations;
+
+            //     model.position.set(0, 0, 0);
+            //     model.rotation.y = -1.02;
+
+            //     model.traverse(function(node){
+            //         if(node.isMesh)
+            //         node.castShadow = true;
+
+            //     })
+            //     model.castShadow = true;
+            //     model.receiveShadow = true;
+
+            //     scene.add(model);
+            //     console.log('diorama',model);
+
+            //     mixer = new THREE.AnimationMixer(model);
+            //     animations.forEach((clip) => {
+            //         mixer.clipAction(clip).play();
+            //     });
+               
+
+            // });
+
+
+
 
             const animate = function (){
                 requestAnimationFrame(animate);
@@ -85,7 +141,15 @@
                 renderer.render(scene, camera);
             };
 
+
+            const resize = ()=>{
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+            };
+
             animate();
+            window.addEventListener('resize', resize)
 
 
         })

@@ -17,11 +17,8 @@
 </svelte:head>
 
 <Box />
-<Sidebar />
-<main>
-    <!-- <div class="main-container"> -->
-    <!-- <Box {sceneContainer}/> -->
-    
+<!-- <Sidebar /> -->
+<!-- <main>    
     <section id="home" class="home">
         <div class="home-text">
             <h1>Hi, I',m <br> Nurman Awaluddin</h1>
@@ -33,7 +30,7 @@
     <section id="about">
         <h1>About</h1>
     </section>
-</main>
+</main> -->
 
     
 
